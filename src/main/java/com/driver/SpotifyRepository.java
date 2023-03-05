@@ -37,39 +37,7 @@ public class SpotifyRepository {
         artists = new ArrayList<>();
     }
 
-//    public User createUser(String name, String mobile) {
-//    }
-//
-//    public Artist createArtist(String name) {
-//    }
-//
-//    public Album createAlbum(String title, String artistName) {
-//    }
-//
-//    public Song createSong(String title, String albumName, int length) throws Exception{
-//    }
-//
-//    public Playlist createPlaylistOnLength(String mobile, String title, int length) throws Exception {
-//
-//    }
-//
-//    public Playlist createPlaylistOnName(String mobile, String title, List<String> songTitles) throws Exception {
-//
-//    }
-//
-//    public Playlist findPlaylist(String mobile, String playlistTitle) throws Exception {
-//
-//    }
-//
-//    public Song likeSong(String mobile, String songTitle) throws Exception {
-//
-//    }
-//
-//    public String mostPopularArtist() {
-//    }
-//
-//    public String mostPopularSong() {
-//    }
+
 public User createUser(String name, String mobile) {
     for(User curUser: users){
         if(curUser.getMobile().equals(mobile)){
@@ -104,12 +72,12 @@ public User createUser(String name, String mobile) {
         albums.add(album);
 
         //putting artis and album in DB
-        List<Album> alb = new ArrayList<>();
+        List<Album> alm = new ArrayList<>();
         if(artistAlbumMap.containsKey(artist)){
-            alb=artistAlbumMap.get(artist);
+            alm=artistAlbumMap.get(artist);
         }
-        alb.add(album);
-        artistAlbumMap.put(artist,alb);
+        alm.add(album);
+        artistAlbumMap.put(artist,alm);
         return album;
     }
 

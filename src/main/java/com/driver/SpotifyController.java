@@ -21,7 +21,7 @@ public class SpotifyController {
     @PostMapping("/add-artist")
     public String createArtist(@RequestParam(name = "name") String name){
         //create the artist with given name
-   Artist artist =spotifyService.createArtist(name);
+   Artist art =spotifyService.createArtist(name);
         return "Success";
     }
 
